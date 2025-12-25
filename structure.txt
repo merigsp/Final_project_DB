@@ -1,0 +1,13 @@
+project/
+├─ app/
+│  ├─ main.py          # FastAPI 
+│  ├─ models.py        # SQLAlchemy 
+│  ├─ schemas.py       # Pydantic for API
+│  ├─ crud.py          # CRUD func-s
+│  └─ database.py      # connection to БД
+├─ alembic/           
+├─ docker-compose.yml
+├─ Dockerfile
+├─ init_db.sh         
+└─ requirements.txt
+

@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Date
 from sqlalchemy.orm import relationship
 from database import Base
+from sqlalchemy.dialects.postgresql import JSONB
 
 class Tournament(Base):
     __tablename__ = "tournear"
@@ -13,6 +14,7 @@ class Tournament(Base):
     qualification_level = Column(Integer, nullable=False)
     
     participations = relationship("Participation", back_populates="tournament")
+    additional_info = Column(JSONB, nullable=True)
 
 class Participation(Base):
     __tablename__ = "participance"
